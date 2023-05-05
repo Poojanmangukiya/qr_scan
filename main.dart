@@ -65,7 +65,9 @@ class _HomePageState extends State<HomePage> {
       }
     }
 
-    setState(() {});
+    setState(() {
+      _imagePath = xfile!.path;
+    });
   }
 
   Future<void> _downloadImage(String url) async {
