@@ -70,7 +70,7 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-  Future<void> _downloadImage(String url) async {
+  Future<void> QrchooseFromLink(String url) async {
     try {
       var response = await Dio()
           .get(url, options: Options(responseType: ResponseType.bytes));
@@ -106,7 +106,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Image Downloader'),
+        title: Text('Qr Code Scanner'),
       ),
       body: FocusScope(
         node: _focusNode,
@@ -142,7 +142,7 @@ class _HomePageState extends State<HomePage> {
                   ElevatedButton(
                     child: Text('Scan Image from link'),
                     onPressed: () {
-                      _downloadImage(
+                      QrchooseFromLink(
                         linkController.text.toString(),
                       );
                       linkController.clear();
