@@ -120,17 +120,21 @@ class _HomePageState extends State<HomePage> {
                   width: 200,
                   height: 200,
                 ),
+              SizedBox(height: 10),
               Text(
                 _decoded,
                 style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 10),
-              TextField(
-                controller: linkController,
-                decoration: InputDecoration(
-                  hintText: 'Please enter link',
-                  border: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.black),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: TextField(
+                  controller: linkController,
+                  decoration: InputDecoration(
+                    hintText: 'Please enter link',
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.black),
+                    ),
                   ),
                 ),
               ),
